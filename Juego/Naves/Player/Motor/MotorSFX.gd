@@ -10,7 +10,7 @@ export var volumen_apagado : float = -30.0
 onready var tween_sonido : Tween = $Tween
 
 ## Atributos
-var volumen_original : float
+var volumen_original : float 
 
 ## Metodos
 func _ready() -> void:

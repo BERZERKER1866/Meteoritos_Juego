@@ -3,6 +3,7 @@
 [ext_resource path="res://Juego/Naves/Proyectiles/Proyectil.tscn" type="PackedScene" id=1]
 
 [node name="ProyectilEnemigo" instance=ExtResource( 1 )]
+modulate = Color( 0.523438, 0, 1, 1 )
 z_index = 39
 z_as_relative = false
 collision_layer = 16
