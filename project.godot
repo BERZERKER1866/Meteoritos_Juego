@@ -76,6 +76,11 @@ config/icon="res://Icono_Juego.png"
 
 Eventos="*res://Juego/Autoloads/Eventos.gd"
 
+[debug]
+
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1920
