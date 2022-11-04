@@ -112,8 +112,12 @@ func destruir() -> void:
 	controlador_estados(ESTADO.MUERTO)
 
 func recibir_danio(danio : float) -> void:
-	
 	hitpoints -= danio
 	if hitpoints <= 0.0:
 		destruir()
 	impacto_sfx.play()
+
+func _on_body_entered(body):
+	if body is Meteorito:
+		body.destruir()
+		destruir()
