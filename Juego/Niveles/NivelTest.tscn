@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Juego/Niveles/Fondos/FondoPurpura.png" type="Texture" id=8]
 [ext_resource path="res://Juego/Meteoritos/SectorMeteoritos.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Juego/Niveles/CamaraJuego.gd" type="Script" id=10]
+[ext_resource path="res://Juego/EstacionRecarga/EstacionRecarga.tscn" type="PackedScene" id=11]
 
 [node name="NivelTest" type="Node2D"]
 script = ExtResource( 2 )
@@ -28,6 +29,11 @@ environment = ExtResource( 3 )
 position = Vector2( -2067, 6499.86 )
 scale = Vector2( 700.007, 481.806 )
 texture = ExtResource( 8 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="EstacionRecarga" parent="Node" instance=ExtResource( 11 )]
+position = Vector2( 405.791, 819.592 )
 
 [node name="TriggersLluviaMeteoritos" type="Node" parent="."]
 

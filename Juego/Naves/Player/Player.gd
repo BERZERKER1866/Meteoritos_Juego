@@ -18,12 +18,19 @@ var estado_actual : int = ESTADO.SPAWN
 
 ## Atributos onready
 onready var canion : canion = $Canion
-onready var laser : RayoLaser = $LaserBeam2D
+onready var laser : RayoLaser = $LaserBeam2D setget ,get_laser
 onready var estela : Estela = $EstelaPuntoInicio/Trail2D
 onready var motor_sfx : Motor = $MotorSFX
 onready var colisionador : CollisionShape2D = $CollisionShape2D
 onready var impacto_sfx : AudioStreamPlayer = $ImpactoSFX
-onready var escudo : Escudo = $Escudo
+onready var escudo : Escudo = $Escudo setget ,get_escudo
+
+## Setters y Getters
+func get_laser() -> RayoLaser:
+	return laser
+
+func get_escudo() -> Escudo:
+	return escudo
 
 ## Metodos
 func _ready() -> void:
@@ -92,7 +99,7 @@ func controlador_estados(nuevo_estado : int) -> void:
 		ESTADO.MUERTO:
 			colisionador.set_deferred("disabled", true)
 			canion.set_puede_disparar(false)
-			Eventos.emit_signal("nave_destruida", global_position, 3)
+			Eventos.emit_signal("nave_destruida", self, global_position, 3)
 			queue_free()
 		_:
 			printerr("Error de estado")
