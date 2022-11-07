@@ -216,11 +216,13 @@ rotation = 1.5708
 texture = ExtResource( 3 )
 
 [node name="SpriteAbriendo1" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0, 0, 10, 1 )
 rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="SpriteAbriendo2" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0, 0, 10, 1 )
 rotation = 1.5708
 texture = ExtResource( 1 )
